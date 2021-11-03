@@ -56,7 +56,9 @@ int raicesPrimitivas(int n) { //Busca las raices primitivas del numero primo n y
    return -1;
 }
 int main() {
-   int n = 7;
+   int n;
+   cout<< "Introduzca un primo:  ";
+   cin>>n;
    cout<<" Smallest primitive root of "<<n<<" is "<<raicesPrimitivas(n);
    return 0;
 }
