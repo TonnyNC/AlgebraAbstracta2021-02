@@ -11,7 +11,7 @@ bool ifPrimo(int n) { //Evalua si es primo o no
          return false;
    return true;
 }
-int power(int x, int y, int p) { // Evaluara los numero primos en busca de sus potencias que componen el primo p
+int potencia(int x, int y, int p) { // Evaluara los numero primos en busca de sus potencias que componen el primo p
    int res = 1;
    x = x % p;
    while (y > 0){
@@ -45,7 +45,7 @@ int raicesPrimitivas(int n) { //Busca las raices primitivas del numero primo n y
    for (int r=2; r<n; r++){
       bool indicador = false;
       for (auto it = s.begin(); it != s.end(); it++){
-         if (power(r, phi/(*it), n) == 1){
+         if (potencia(r, phi/(*it), n) == 1){
             indicador = true;
             break;
          }
@@ -59,6 +59,6 @@ int main() {
    int n;
    cout<< "Introduzca un primo:  ";
    cin>>n;
-   cout<<" Smallest primitive root of "<<n<<" is "<<raicesPrimitivas(n);
+   cout<<" La menor raiz primitiva: "<<n<<" es "<<raicesPrimitivas(n);
    return 0;
 }
